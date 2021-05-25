@@ -1,0 +1,47 @@
+Square Root of number: Given a number n, devise an algorithm to compute its square root.
+
+Input
+
+First line will contain T=number of test case, next T lines will contains an integer n where n >=1.
+
+Output
+
+For each test case, calculate and print the square root of n with 2 decimal places (Round to nearest numbers e.g. 4.472 to 4.47 & 3.157 to 3.16) in new lines. There should be no space after each element. Sample Input
+
+6 
+36 
+16 
+9 
+20 
+1 
+11
+
+Sample Output
+
+6.00 
+4.00 
+3.00 
+4.47 
+1.00 
+3.32
+
+//
+CODE STARTS FROM HERE
+//
+# appended n terms in the list
+lst=[]
+# this will put all inputs in the list
+n = int(input())
+for i in range(0,n):
+    ele = int(input())
+    lst.append(ele)
+#we will square root the i in the lst
+import math
+
+all_roots = []  #list to hold all square roots from terms list
+
+for i in lst:
+    all_roots.append(math.sqrt(i))
+for i in all_roots:
+    print(format(i, ".2f"))
+# . 2f is used for 2 decimal presicion
